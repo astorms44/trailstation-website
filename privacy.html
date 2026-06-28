@@ -17,7 +17,7 @@
     <h1 style="margin-top:18px">Trailstation &mdash; Privacy Policy</h1>
     <p class="muted">
       <strong>Effective date:</strong> June 4, 2026<br>
-      <strong>Last updated:</strong> June 6, 2026<br>
+      <strong>Last updated:</strong> June 27, 2026<br>
       <strong>Publisher:</strong> Austin Storms<br>
       <strong>Contact:</strong> <a href="mailto:stormsunity@gmail.com">stormsunity@gmail.com</a>
     </p>
@@ -30,14 +30,14 @@
     <h2>TL;DR</h2>
     <ul>
       <li>Trailstation collects <strong>no data</strong>.</li>
-      <li>It works offline. The <strong>only</strong> time it uses the network is when <em>you</em> choose to create an iCloud share link &mdash; and that uploads the station to <strong>your own</strong> iCloud Drive, never to us.</li>
+      <li>It works offline. Two optional features connect only when <em>you</em> start them, and <strong>neither sends anything to us</strong>: <strong>syncing time with a nearby device</strong> (a direct, short-range link over the local network &mdash; no internet, no servers), and creating an <strong>iCloud share link</strong> (which uploads the station to <strong>your own</strong> iCloud Drive).</li>
       <li>No accounts, no analytics, no ads, no tracking, no third-party SDKs.</li>
       <li>The audio you import and the stations you build stay <strong>on your device</strong>. We never see them.</li>
     </ul>
   </div>
 
   <h2>What we collect</h2>
-  <p><strong>Nothing.</strong> Trailstation has no servers of its own. There is no analytics, no advertising, no account, and no login, and we &mdash; the developer &mdash; never receive any information about you or your use of the app. The app only touches the network when <em>you</em> create an iCloud share link (see &ldquo;Sharing a station&rdquo; below), and even then the file goes to <em>your</em> iCloud, not to us.</p>
+  <p><strong>Nothing.</strong> Trailstation has no servers of its own. There is no analytics, no advertising, no account, and no login, and we &mdash; the developer &mdash; never receive any information about you or your use of the app. The app only uses a connection for two optional, user-initiated features: syncing time with a nearby device (a direct, local device-to-device link &mdash; see &ldquo;Syncing time with a nearby device&rdquo; below) and creating an iCloud share link (see &ldquo;Sharing a station&rdquo;). In both cases the developer receives nothing.</p>
 
   <h2>What the app stores on your device</h2>
   <p>Everything the app needs lives in its own private storage on your device (its app sandbox). This includes:</p>
@@ -55,6 +55,9 @@
   <h2>Apple Watch</h2>
   <p>If you send your stations to a paired Apple Watch, the audio is transferred <strong>directly between your own iPhone and your own Apple Watch</strong> using Apple&rsquo;s on-device Watch Connectivity framework. It does not pass through any server, and the developer never sees it.</p>
 
+  <h2>Syncing time with a nearby device</h2>
+  <p>Stations stay in sync because every device reads the loop position from its own clock. On a long trip with no signal, you can re-align two clocks by tapping <strong>Sync Time Nearby</strong>. This uses Apple&rsquo;s Multipeer Connectivity to form a <strong>direct, short-range link between your device and the nearby device</strong> (peer-to-peer Wi-Fi/Bluetooth over the local network). The two devices exchange <strong>only timestamps</strong> to measure the clock difference &mdash; no audio, no personal data, no internet, and no server of any kind is involved. The connection is active only while the sync screen is open and is torn down as soon as you finish. iOS asks for Local Network permission the first time; it is used solely for this feature.</p>
+
   <h2>What we do not collect</h2>
   <ul>
     <li>We do not collect your name, email, phone number, address, or any contact information.</li>
@@ -63,7 +66,8 @@
     <li>We do not collect usage patterns, listening history, or which stations you build.</li>
     <li>We do not run any third-party analytics SDK (no Firebase, no Mixpanel, no Sentry, no Crashlytics).</li>
     <li>We do not run any advertising SDK.</li>
-    <li>We make no network requests of our own &mdash; the only network use is the optional iCloud link sharing you initiate, which uploads to your own iCloud and never to us.</li>
+    <li>We make no network requests to any server of our own. The app connects only for two optional, user-initiated features: a <strong>direct local link</strong> to a nearby device for time sync (no internet), and uploading to <strong>your own</strong> iCloud for link sharing &mdash; never to us.</li>
+    <li>The nearby time-sync feature exchanges only clock timestamps with the device you choose; it sends no audio and no personal data, and uses no internet.</li>
   </ul>
 
   <h2>What we share with third parties</h2>
@@ -95,6 +99,7 @@
 
   <h2>Changelog</h2>
   <ul>
+    <li><strong>June 27, 2026, v1.0:</strong> Added off-grid time sync with a nearby device &mdash; a direct, short-range local-network link that exchanges only clock timestamps (no internet, no servers, no data collected) &mdash; and reading track title/artist tags from your own files. Updated the network wording to cover the local-network feature.</li>
     <li><strong>June 6, 2026, v1.0:</strong> Added optional iCloud-link sharing (uploads a station to your own iCloud Drive to create a shareable link); clarified the network/offline wording accordingly.</li>
     <li><strong>June 4, 2026, v1.0:</strong> Initial publication.</li>
   </ul>
